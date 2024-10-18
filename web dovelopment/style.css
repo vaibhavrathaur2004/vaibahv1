@@ -1,0 +1,164 @@
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+ * {
+   padding: 0;
+   margin: 0;
+ }
+
+ body{
+  background-color: black;
+ }
+
+ .main {
+   background-image: url(images/bg.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: max(1200px, 100vw);
+   height: 70vh;
+   position: relative;
+ }
+
+ .main .box {
+   height:70vh;
+   opacity: 47.12%;
+   width:100%;
+   background-color: black;
+   position: absolute;
+   top: 0px;
+ }
+
+ nav {
+   display: flex;
+   align-items: center;
+   max-width: 60vw;
+   margin: auto;
+   height: 62px;
+   justify-content: space-between;
+ }
+
+ nav img {
+   position: relative;
+   z-index: 10;
+   width: 115px;
+   ;
+ }
+
+ .hero {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   color: white;
+   position: relative;
+   z-index: 10;
+   font-family: "Roboto", sans-serif;
+   gap: 20px;
+   padding: 0px 30px;
+
+ }
+
+ .hero> :nth-child(1) {
+   font-size: 33px;
+   font-weight: bolder;
+   text-align: center;
+ }
+
+ .hero> :nth-child(2){
+  font-size: 20px;
+  font-weight:290;
+  text-align: center;
+ }
+
+ .hero> :nth-child(3){
+  font-size: 19px;
+  font-weight:290;
+  text-align: center;
+ }
+
+ .sepration{
+  height: 7px;
+  background-color:dimgrey;
+  
+ }
+
+.button .btn2{
+  background-color: red;
+  color: rgba(255, 255, 255, 0.824);
+  font-weight:500;
+  padding: 5px 7px;
+  border-radius: 5%;
+  margin: 12px 12px;
+  font-family: 'Courier New', Courier, monospace;
+}
+.btn1{
+  background-color: red;
+  color: white;
+  padding: 2px 10px;
+}
+
+.button input{
+  padding: 5px 7px;
+  background-color: rgba(23, 23,23,0.2);
+  color: white;
+}
+.en{
+  color: rgb(233, 227, 227);
+  background-color: rgba(18, 17, 17, 0.58);
+  padding: 2px 10px;
+  border: 1px solid rgba(240, 232, 232, 0.293);
+  
+}
+
+.first{
+  display: flex;
+  justify-content: center;
+  max-width: 70vw;
+  margin: auto;
+  color: white;
+  align-items: center;
+}
+.sec{
+  position: relative;
+}
+
+.sec img {
+  width: 555px;
+  position: relative;
+  z-index: 10;
+}
+
+.sec video {
+  position:absolute;
+  position: absolute;
+  top: 70px;
+  right:3px;
+}
+
+.fff :first-child{
+   font-size: 48px;
+   font-weight: bolder;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.fff :nth-child(2){
+  font-size: 18px;
+}
+
+.second img{
+  margin-left: 10px;
+  margin-left: -32px;
+}
+.hhh :first-child{
+  font-size: 48px;
+}
+.hhh :nth-child(2){
+  font-size: 18px;
+}
+
+.jjj :first-child{
+  font-size: 48px;
+}
+.jjj :nth-child(2){
+  font-size: 18px;
+}
