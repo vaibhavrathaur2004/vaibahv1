@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .wrapper {
+        background-color: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        max-width: 450px;
+        width: 100%;
+      }
+
+      .input-group {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        justify-content: center;
+      }
+
+      .inp {
+        padding: 0.75rem 1rem;
+        font-size: 1.1rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        width: 100%;
+        transition: all 0.3s ease;
+      }
+
+      .inp:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      .button-group {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5rem;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .btn {
+        flex: 1 1 calc(50% - 0.5rem);
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #0056b3;
+      }
+
+      .result {
+        background-color: #343a40;
+        color: #fff;
+        font-size: 2rem;
+        text-align: center;
+        padding: 1rem;
+        border-radius: 10px;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="input-group">
+        <input type="number" placeholder="1st number" class="inp" id="first-input" />
+        <input type="number" placeholder="2nd number" class="inp" id="sec-input" />
+      </div>
+      <div class="button-group">
+        <button class="btn add">+</button>
+        <button class="btn subs">−</button>
+        <button class="btn mul">×</button>
+        <button class="btn divide">÷</button>
+      </div>
+      <div class="result">0</div>
+    </div>
+
+    <script>
+      const number1 = document.getElementById("first-input");
+      const number2 = document.getElementById("sec-input");
+      const addition = document.querySelector(".add");
+      const subtraction = document.querySelector(".subs");
+      const multiply = document.querySelector(".mul");
+      const divide = document.querySelector(".divide");
+      const result = document.querySelector(".result");
+
+      const getNumbers = () => [parseFloat(number1.value), parseFloat(number2.value)];
+
+      addition.addEventListener("click", () => {
+        const [a, b] = getNumbers();
+        const ans = a + b;
+        result.innerText = ans;
+        alert("The answer is " + ans);
+      });
+
+      subtraction.addEventListener("click", () => {
+        const [a, b] = getNumbers();
+        const ans = a - b;
+        result.innerText = ans;
+        alert("The answer is " + ans);
+      });
+
+      multiply.addEventListener("click", () => {
+        const [a, b] = getNumbers();
+        const ans = a * b;
+        result.innerText = ans;
+        alert("The answer is " + ans);
+      });
+
+      divide.addEventListener("click", () => {
+        const [a, b] = getNumbers();
+        if (b === 0) {
+          alert("Cannot divide by zero!");
+          result.innerText = "Error";
+        } else {
+          const ans = a / b;
+          result.innerText = ans;
+          alert("The answer is " + ans);
+        }
+      });
+    </script>
+  </body>
+</html>
